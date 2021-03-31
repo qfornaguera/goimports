@@ -130,7 +130,8 @@ func cleanBlanks(src []byte) []byte {
 		return src
 	}
 
-	end := bytes.Index(src, []byte(importsEnd))
+	// finding imports block closure
+	end := begin + bytes.Index(src[begin:], []byte(importsEnd))
 	cleaned := bytes.ReplaceAll(src[begin:end], []byte(blank), []byte(crfl))
 	src = bytes.Replace(src, src[begin:end], cleaned, 1)
 	return src
