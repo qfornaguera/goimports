@@ -14,7 +14,7 @@ See usage and editor integration notes, now moved elsewhere:
 
    http://godoc.org/golang.org/x/tools/cmd/goimports
    
-This specific fork of [bradfitz goimports](https://github.com/bradfitz/goimports), cleans all blank lines in imports block before formatting
+This specific fork of [bradfitz goimports](https://github.com/bradfitz/goimports) cleans all blank lines in imports block before formatting
 
 So, usually when an import is added by the IDE it adds it at the top of the dependency block. Like this:
 ```
